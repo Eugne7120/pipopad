@@ -1,0 +1,6 @@
+{
+  "name": "Pipo Pad ($PIPO) — Positive-Entry Launchpad",
+  "description": "Positive-Entry Token Launchpad on Robinhood Chain featuring instant Buy Bonus tokens from a self-refilling Locked Treasury Vault and automated ETH, USDG, and Tokenized Asset holder payouts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

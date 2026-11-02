@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+:root {
+  /* Unified Pipo Pad Hyperliquid Palette (#97FCE4 Aquamarine, #0F3933 Firefly, #04060C Ebony, #F5FEFD Foam) */
+  --color-bg: #04060C;
+  --color-bg-deep: #04060C;
+  --color-surface: #081C19;
+  --color-surface-raised: #0F3933;
+  --color-accent: #97FCE4;
+  --color-accent-hover: #76F7D9;
+  --color-paper: #F5FEFD;
+  --color-paper-muted: #E6F7F5;
+  --color-lavender: #0F3933;
+  --color-text: #F5FEFD;
+  --color-text-ink: #04060C;
+  --color-text-muted: #89B0A9;
+  --color-text-subtle: #5E857E;
+  --color-line: #0F3933;
+  --color-line-light: #C2E8E2;
+
+  --font-display: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono-label {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.display-hero-xl {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  word-spacing: 0.04em;
+  line-height: 0.94;
+  text-wrap: balance;
+}
+
+.display-section-h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  word-spacing: 0.03em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.display-card-h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.eyebrow-mono {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.25;
+}
+
+.page-shell {
+  width: min(100% - 64px, 1680px);
+  margin-inline: auto;
+}
+
+@media (max-width: 1024px) {
+  .page-shell {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: calc(100% - 28px);
+  }
+}
+
+/* Custom Range Sliders for Hyperliquid Palette */
+input[type="range"].pipo-slider-dark {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: #04060C;
+  border-radius: 999px;
+  outline: none;
+}
+
+input[type="range"].pipo-slider-dark::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #04060C;
+  border: 3px solid #F5FEFD;
+  cursor: pointer;
+  transition: transform 150ms ease-out;
+}
+
+input[type="range"].pipo-slider-dark::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+input[type="range"].pipo-slider-green {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: #0F3933;
+  border-radius: 999px;
+  outline: none;
+}
+
+input[type="range"].pipo-slider-green::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #97FCE4;
+  border: 3px solid #04060C;
+  cursor: pointer;
+  transition: transform 150ms ease-out;
+}
+
+input[type="range"].pipo-slider-green::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pipo-marquee {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-pipo-marquee {
+  display: flex;
+  width: max-content;
+  animation: pipo-marquee 30s linear infinite;
+}
+
+.animate-pipo-marquee:hover {
+  animation-play-state: paused;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
